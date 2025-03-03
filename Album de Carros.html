@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Imagens</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+            background-color: #8d8a8a;
+            margin: 0;
+            padding: 0;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 24px;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+            gap: 10px;
+            padding: 20px;
+            justify-items: center;
+        }
+
+        .img-box {
+            position: relative; /* Necessário para o subtítulo estar sobre a imagem */
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .img-box img {
+            width: 270px;
+            height: 270px;
+            border-radius: 20px;
+            transition: transform 0.3s;
+        }
+
+        .img-box img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Subtítulo no topo esquerdo */
+        .description {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 18px;
+            color: #fff;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* Estilo do Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-content {
+            margin: 10% auto;
+            display: block;
+            max-width: 80%;
+            border-radius: 8px;
+        }
+
+        .close {
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            transition: color 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #ff6347;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="title">Galeria de Carros Esportivos</div>
+
+    <div class="container">
+        <!-- Linha 1 -->
+        <div class="img-box">
+            <div class="description">Porsche Carrera</div>
+            <a href="file:///C:/Users/Flamboyant/Desktop/carrosssss/Album%20de%20Carros/Pagina%20porsche%20carrera.html" target="_blank">
+                <img src="c:\Users\Flamboyant\Downloads\Porsche 991 Carrera GTS 🧼 A Huge thanks to….jpeg" alt="Foto 1">
+            </a>
+        </div>
+        <div class="img-box">
+            <div class="description">Porsche Panamera</div>
+            <a href="file:///C:/Users/Flamboyant/Desktop/carrosssss/Album%20de%20Carros/pagina%20da%20panameira.html" target="_blank">
+                <img src="c:\Users\Flamboyant\Downloads\Porsche Panamera.jpeg" alt="Foto 2">
+            </a>
+        </div>
+        <div class="img-box">
+            <div class="description">Porsche 718 Cayman GTS</div>
+            <a href="file:///C:/Users/Flamboyant/Desktop/carrosssss/Album%20de%20Carros/porsche%20cayman.html" target="_blank">
+                <img src="c:\Users\Flamboyant\Downloads\718 Cayman GTS.jpeg" alt="Foto 3">
+            </a>
+        </div>
+        
+        </a> 
+        <div class="img-box">
+            <div class="description">Porsche 911 GT3RS</div>
+            <a href="file:///C:/Users/Flamboyant/Desktop/carrosssss/Album%20de%20Carros/porsche%20911%20gt3.html" target="_blank">
+                <img src="c:\Users\Flamboyant\Downloads\Porsche 911 GT3RS  pink and white.jpeg" alt="Foto 4">
+            </a>
+        </div>
+
+        <!-- Linha 2 -->
+        <div class="img-box">
+            <div class="description">Pagani Huayra Codalunga</div>
+            <a href="file:///C:/Users/Flamboyant/Desktop/carrosssss/Album%20de%20Carros/pagani%20huayra.html" target="_blank">
+                <img src="c:\Users\Flamboyant\Downloads\2b73efe9-67ee-4311-9162-416576828637.jpeg" alt="Foto 5">
+            </a>
+        </div>
+        <div class="img-box">
+            <div class="description">Pagani Zonda R</div>
+            <a href="file:///C:/Users/Flamboyant/Desktop/carrosssss/Album%20de%20Carros/pagani%20zonda.html" target="_blank">
+                <img src="c:\Users\Flamboyant\Downloads\ace4ac58-3248-4381-b4db-cfd1754da375.jpeg" alt="Foto 6">
+            </a>
+        </div>
+        <div class="img-box">
+            <div class="description">Pagani Utopia</div>
+            <a href="file:///C:/Users/Flamboyant/Desktop/carrosssss/Album%20de%20Carros/pagani%20utopia.html" target="_blank">
+                <img src="c:\Users\Flamboyant\Downloads\Pagani Utopia.jpeg" alt="Foto 7">
+            </a>
+        </div>
+        <div class="img-box">
+            <div class="description">Pagani Huayra R Evo</div>
+            <a href="file:///C:/Users/Flamboyant/Desktop/carrosssss/Album%20de%20Carros/pagani%20huayra%20evo.html" target="_blank">
+                <img src="c:\Users\Flamboyant\Downloads\The roofless @paganiautomobili Huayra R Evo has….jpeg" alt="Foto 8">
+            </a>
+        </div>
+
+        <!-- Linha 3 -->
+        <div class="img-box">
+            <div class="description">Lamborghini Veneno</div>
+            <a href="file:///C:/Users/Flamboyant/Desktop/carrosssss/Album%20de%20Carros/lamborghini%20venenno.html" target="_blank">
+                <img src="c:\Users\Flamboyant\Downloads\a8de8de5-db0e-4d1c-8017-369285df4d25.jpeg" alt="Foto 9">
+            </a>
+        </div>
+        <div class="img-box">
+            <div class="description">Lamborghini Sian</div>
+            <a href="file:///C:/Users/Flamboyant/Desktop/carrosssss/Album%20de%20Carros/lamborghini%20sian.html" target="_blank">
+                <img src="c:\Users\Flamboyant\Downloads\Lamborghini.jpeg" alt="Foto 10">
+            </a>
+        </div>
+        <div class="img-box">
+            <div class="description">Lamborghini Aventador</div>
+            <a href="file:///C:/Users/Flamboyant/Desktop/carrosssss/Album%20de%20Carros/lamborghini%20aventador.html" target="_blank">
+                <img src="c:\Users\Flamboyant\Downloads\💥 Lamborghini Aventador SVJ 🔥🔥.jpeg" alt="Foto 11">
+            </a>
+        </div>
+        <div class="img-box">
+            <div class="description">Lamborghini Murcielago</div>
+            <a href="file:///C:/Users/Flamboyant/Desktop/carrosssss/Album%20de%20Carros/lamborghini%20murcielago.html" target="_blank">
+                <img src="c:\Users\Flamboyant\Downloads\Cars & more.jpeg" alt="Foto 12">
+            </a>
+        </div>
+
+        <!-- Linha 4 -->
+        <div class="img-box">
+            <div class="description">Ferrari F40</div>
+            <a href="file:///C:/Users/Flamboyant/Desktop/carrosssss/Album%20de%20Carros/ferrari%20f40.html" target="_blank">
+                <img src="c:\Users\Flamboyant\Downloads\b6727872-7556-4614-87ee-b79dcdd83b4c.jpeg" alt="Foto 13">
+            </a>
+        </div>
+        <div class="img-box">
+            <div class="description">La Ferrari</div>
+            <a href="file:///C:/Users/Flamboyant/Desktop/carrosssss/Album%20de%20Carros/la%20ferrari.html" target="_blank">
+                <img src="c:\Users\Flamboyant\Downloads\4b4b82c3-572b-4218-8b8b-984c6dcafaa8.jpeg" alt="Foto 14">
+            </a>
+        </div>
+        <div class="img-box">
+            <div class="description">Ferrari 488</div>
+            <a href="file:///C:/Users/Flamboyant/Desktop/carrosssss/Album%20de%20Carros/ferrari%20488.html" target="_blank">
+                <img src="c:\Users\Flamboyant\Downloads\Ferrari 488 pista.jpeg" alt="Foto 15">
+            </a>
+        </div>
+        <div class="img-box">
+            <div class="description">Ferrari Enzo</div>
+            <a href="file:///C:/Users/Flamboyant/Desktop/carrosssss/Album%20de%20Carros/ferrari%20enzo.html" target="_blank">
+                <img src="c:\Users\Flamboyant\Downloads\c179d910-e396-4f7a-b5c3-0392c3bd3dab.jpeg" alt="Foto 16">
+            </a>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        function openModal(imgId) {
+            var modal = document.getElementById("myModal");
+            var modalImage = document.getElementById("modalImage");
+            var img = document.getElementById(imgId);
+            modal.style.display = "block";
+            modalImage.src = img.src.replace('150x100', '600x400'); // Ajuste para abrir a imagem maior
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+
+        // Fechar o modal clicando fora da imagem
+        window.onclick = function(event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
