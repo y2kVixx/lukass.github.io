@@ -21,14 +21,14 @@
 
         .container {
             display: grid;
-            grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+            grid-template-columns: repeat(4, 1fr);
             gap: 10px;
             padding: 20px;
             justify-items: center;
         }
 
         .img-box {
-            position: relative; /* Necessário para o subtítulo estar sobre a imagem */
+            position: relative;
             cursor: pointer;
             text-align: center;
         }
@@ -44,7 +44,6 @@
             transform: scale(1.1);
         }
 
-        /* Subtítulo no topo esquerdo */
         .description {
             position: absolute;
             top: 10px;
@@ -57,7 +56,6 @@
             border-radius: 5px;
         }
 
-        /* Estilo do Modal */
         .modal {
             display: none;
             position: fixed;
@@ -99,7 +97,6 @@
     <div class="title">Galeria de Carros Esportivos</div>
 
     <div class="container">
-        <!-- Linha 1 -->
         <div class="img-box">
             <div class="description">Porsche Carrera</div>
             <a href="file:///C:/Users/Flamboyant/Desktop/carrosssss/Album%20de%20Carros/Pagina%20porsche%20carrera.html" target="_blank">
@@ -127,7 +124,6 @@
             </a>
         </div>
 
-        <!-- Linha 2 -->
         <div class="img-box">
             <div class="description">Pagani Huayra Codalunga</div>
             <a href="file:///C:/Users/Flamboyant/Desktop/carrosssss/Album%20de%20Carros/pagani%20huayra.html" target="_blank">
@@ -153,7 +149,6 @@
             </a>
         </div>
 
-        <!-- Linha 3 -->
         <div class="img-box">
             <div class="description">Lamborghini Veneno</div>
             <a href="file:///C:/Users/Flamboyant/Desktop/carrosssss/Album%20de%20Carros/lamborghini%20venenno.html" target="_blank">
@@ -179,7 +174,6 @@
             </a>
         </div>
 
-        <!-- Linha 4 -->
         <div class="img-box">
             <div class="description">Ferrari F40</div>
             <a href="file:///C:/Users/Flamboyant/Desktop/carrosssss/Album%20de%20Carros/ferrari%20f40.html" target="_blank">
@@ -206,7 +200,6 @@
         </div>
     </div>
 
-    <!-- Modal -->
     <div id="myModal" class="modal">
         <span class="close" onclick="closeModal()">&times;</span>
         <img class="modal-content" id="modalImage">
@@ -218,7 +211,7 @@
             var modalImage = document.getElementById("modalImage");
             var img = document.getElementById(imgId);
             modal.style.display = "block";
-            modalImage.src = img.src.replace('150x100', '600x400'); // Ajuste para abrir a imagem maior
+            modalImage.src = img.src.replace('150x100', '600x400'); 
         }
 
         function closeModal() {
@@ -226,7 +219,6 @@
             modal.style.display = "none";
         }
 
-        // Fechar o modal clicando fora da imagem
         window.onclick = function(event) {
             var modal = document.getElementById("myModal");
             if (event.target == modal) {
